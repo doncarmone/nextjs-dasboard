@@ -1,7 +1,10 @@
 import { PokemonsResponse, SimplePokemon } from '@/pokemons';
-import Image from 'next/image';
 import { PokemonGrid } from '../../../pokemons/components/PokemonGrid';
-import { notFound } from 'next/navigation';
+
+export const metadata = {
+  title: '151 Pokemons',
+  description: '151 Pokemons',
+};
 
 const getPokemons = async (
   limit = 20,
