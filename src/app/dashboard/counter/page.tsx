@@ -1,4 +1,5 @@
 import { CartCounter } from '../../../shopping-cart/components/CartCounter';
+
 export const metadata = {
   title: 'Counter Page',
   description: 'Counter page with client-side state management',
