@@ -1,10 +1,11 @@
 'use client';
+/* eslint-disable  @typescript-eslint/no-unused-vars*/
 import { useAppDispatch, useAppSelector } from '@/store';
 import {
   addOne,
   initCounterState,
   substractOne,
-} from '@/store/counter/counterSlice';
+} from '@/store/counter/counter';
 import { useEffect } from 'react';
 
 interface Props {
@@ -26,7 +27,7 @@ export const CartCounter = ({ value = 0 }: Props) => {
   const dispatch = useAppDispatch();
 
   // useEffect(() => {
-  //   dispatch(initCounterState(value));
+  //   dispatch( initCounterState(value) );
   // }, [dispatch, value]);
 
   useEffect(() => {
@@ -35,7 +36,8 @@ export const CartCounter = ({ value = 0 }: Props) => {
 
   return (
     <>
-      <span className='text-9xl'>{count}</span>
+      <span className='text-9xl'> {count} </span>
+
       <div className='flex'>
         <button
           onClick={() => dispatch(addOne())}
@@ -43,6 +45,7 @@ export const CartCounter = ({ value = 0 }: Props) => {
         >
           +1
         </button>
+
         <button
           onClick={() => dispatch(substractOne())}
           className='flex items-center justify-center p-2 rounded-xl bg-gray-900 text-white hover:bg-gray-600 transition-all w-[100px] mr-2'

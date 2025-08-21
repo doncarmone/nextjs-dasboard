@@ -27,7 +27,6 @@ const menuItems = [
     title: 'Pokemons',
     subtitle: 'Generacion Estaticas',
   },
-  ,
   {
     path: '/dashboard/favorites',
     icon: <IoHeartOutline size={40} />,
